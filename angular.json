@@ -29,15 +29,17 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/video.js/dist/video-js.css",
+              "./node_modules/videojs-vr/dist/videojs-vr.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/video.js/dist/video.js",
+              "./node_modules/videojs-vr/dist/videojs-vr.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -98,15 +100,13 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/video.js/dist/video-js.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["node_modules/video.js/dist/video.min.js"]
           }
         }
       }
