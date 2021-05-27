@@ -1,1 +1,22 @@
-<p>file-upload works!</p>
+<form
+  class="file-upload"
+  [formGroup]="videoSubmitForm"
+  (ngSubmit)="onSubmit()"
+  autocomplete="off"
+>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Enter your video URL"
+      [formControl]="urlControl"
+    />
+  </mat-form-field>
+  <button
+    type="submit"
+    mat-flat-button
+    color="primary"
+    [disabled]="!urlControl.valid"
+  >
+    Submit
+  </button>
+</form>
