@@ -3,7 +3,19 @@
     #my_video
     class="video-js vjs-default-skin"
     controls
-    preload="auto"
     crossorigin="anonymous"
+    playsinline
   ></video>
+
+  <div class="go">
+    <input type="text" />
+
+    <button (click)="go(5)">GO</button>
+  </div>
+
+  <button (click)="play()">PLAY</button>
+  <button (click)="pause()">PAUSE</button>
+
+  <button (click)="hideControl()">HIDE CONTROL</button>
+  <button (click)="showControl()">SHOW CONTROL</button>
 </div>

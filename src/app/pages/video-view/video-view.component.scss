@@ -1,9 +1,22 @@
 :host {
   .video-view {
+    // background: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
+
+    .video-js {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    button {
+      width: 150px;
+      outline: none;
+      background: transparent;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 5px;
+    }
   }
 }
