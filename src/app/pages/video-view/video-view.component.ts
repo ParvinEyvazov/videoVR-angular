@@ -66,6 +66,8 @@ export class VideoViewComponent implements OnInit, AfterViewInit {
       forceCardboard: false,
     });
 
+    // console.log(this.player.vr());
+
     // error handling
     this.player.on('error', (error: any) => {
       console.warn(error);
@@ -112,5 +114,23 @@ export class VideoViewComponent implements OnInit, AfterViewInit {
 
   showControl() {
     this.player.controls(true);
+  }
+
+  openVR() {
+    // this.player.vrdisplayactivate();
+    console.log(document.getElementsByClassName('vjs-button-vr')[0]);
+    // document
+    //   .getElementsByClassName('vjs-button-vr')[0]
+    //   .addEventListener('click', function(event) {
+    //     console.log(event);
+    //   });
+
+    // document.getElementsByClassName("vjs-button-vr").click();
+
+    // open vr
+    let element: HTMLElement = document.getElementsByClassName(
+      'vjs-button-vr'
+    )[0] as HTMLElement;
+    element.click();
   }
 }
